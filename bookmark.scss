@@ -1,0 +1,43 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include flexCenter();
+    background-color: #E3E3E3;
+    height: 100vh;
+    width: 100vh;
+
+}
+
+.container {
+    background-color: rgb(125, 129, 153);
+    height: 800px;
+    width: 800px;
+}
+
+.header-title {
+    color: #C7DEFB;
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+.bookmark-list {
+    @include flexCenter();
+    background-color: #C7DEFB;
+    height: 135px;
+    width: 750px;
+}
+
+.bookmark-title {
+    font-size: 3rem;
+    margin:5px;
+}
+
+.bookmark-url {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
