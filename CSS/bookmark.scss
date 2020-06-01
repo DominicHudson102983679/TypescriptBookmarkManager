@@ -50,7 +50,7 @@ body {
 .add-div {
     @include flexCenter();
     display: inline-block;
-    float: right;
+    // float: right;
     margin-right: 70px;
     margin-top: 55px;
 }
