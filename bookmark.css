@@ -12,6 +12,7 @@ body {
   height: 100vh;
   width: 100vh;
   font-family: 'Noto Serif', serif;
+  padding: 0px;
 }
 
 .container {
@@ -41,6 +42,7 @@ body {
   background-color: #C7DEFB;
   height: 135px;
   width: 800px;
+  padding: 0;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 25px;
