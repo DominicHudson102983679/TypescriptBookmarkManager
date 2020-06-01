@@ -11,18 +11,21 @@ body {
   background-color: #E3E3E3;
   height: 100vh;
   width: 100vh;
+  font-family: 'Noto Serif', serif;
 }
 
 .container {
-  background-color: #7d8199;
-  height: 800px;
-  width: 800px;
+  background-color: #3e425c;
+  height: 900px;
+  width: 900px;
 }
 
 .header-title {
+  display: inline-block;
   color: #C7DEFB;
   font-size: 4rem;
-  margin: 2rem;
+  margin-left: 65px;
+  margin-top: 40px;
 }
 
 .bookmark-list {
@@ -37,16 +40,118 @@ body {
           align-items: center;
   background-color: #C7DEFB;
   height: 135px;
-  width: 750px;
+  width: 800px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.add-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  float: right;
+  margin-right: 70px;
+  margin-top: 55px;
+}
+
+.fa-plus-square {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #C7DEFB;
+  float: right;
+}
+
+.add-div:hover .fa-plus-square {
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  color: #75a759;
+  cursor: pointer;
+}
+
+.fa-heart,
+.fa-trash,
+.fa-google,
+.fa-facebook-square {
+  color: #3e425c;
+}
+
+.heart-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90px;
+}
+
+.heart-div:hover .fa-heart {
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  color: #fb6363;
+}
+
+.trash-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90px;
+}
+
+.trash-div:hover .fa-trash {
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  color: #fb6363;
+}
+
+.icon-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
 }
 
 .bookmark-title {
-  font-size: 3rem;
-  margin: 5px;
+  font-size: 2.5rem;
+  width: 200px;
+  color: #3e425c;
 }
 
 .bookmark-url {
-  font-size: 1.5rem;
-  margin: 5px;
+  font-size: 1.25rem;
+  width: 320px;
+  float: left;
+  color: #C7DEFB;
 }
 /*# sourceMappingURL=bookmark.css.map */

@@ -9,35 +9,122 @@ body {
     background-color: #E3E3E3;
     height: 100vh;
     width: 100vh;
+    font-family: 'Noto Serif', serif;
+    
 
 }
 
 .container {
-    background-color: rgb(125, 129, 153);
-    height: 800px;
-    width: 800px;
+    background-color: rgb(62, 66, 92);
+    height: 900px;
+    width: 900px;
 }
 
+// BOOKMARK MANAGER
 .header-title {
+    display: inline-block;
     color: #C7DEFB;
     font-size: 4rem;
-    margin: 2rem;
+    margin-left: 65px;
+    margin-top: 40px;
+
 }
 
+// list of bookmarks
 .bookmark-list {
     @include flexCenter();
     background-color: #C7DEFB;
     height: 135px;
-    width: 750px;
+    width: 800px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
+
+
+//icons
+
+// add icon top right
+.add-div {
+    @include flexCenter();
+    display: inline-block;
+    float: right;
+    margin-right: 70px;
+    margin-top: 55px;
+}
+
+.fa-plus-square {
+    @include flexCenter();
+    color: #C7DEFB;
+    float: right;
+}
+
+.add-div:hover{
+    .fa-plus-square {
+        transition: color 0.25s ease-in-out; 
+        color: rgb(117, 167, 89);
+        cursor: pointer;
+      
+    }
+}
+
+.fa-heart, 
+.fa-trash,
+.fa-google,
+.fa-facebook-square {
+    color: rgb(62, 66, 92);
+}
+
+// heart icon
+.heart-div{
+    @include flexCenter();
+    width: 90px;
+}
+
+.heart-div:hover{
+    .fa-heart {
+        transition: color 0.5s ease-in-out; 
+        color: rgb(251, 99, 99);
+      
+    }
+}
+
+
+// trash icon
+.trash-div {
+    @include flexCenter();
+    width: 90px;
+}
+
+.trash-div:hover{
+    .fa-trash {
+        transition: color 0.5s ease-in-out; 
+        color: rgb(251, 99, 99);
+    
+    }
+}
+
+//-----------------------------------
+// BOOKMARK LISTING STYLING
+.icon-div {
+    @include flexCenter();
+    width:100px;
+}
+
+// bookmark title
 .bookmark-title {
-    font-size: 3rem;
-    margin:5px;
+    font-size: 2.5rem;  
+    width: 200px;
+    color: rgb(62, 66, 92);
 }
 
+//url
 .bookmark-url {
-    font-size: 1.5rem;
-    margin: 5px;
+    font-size: 1.25rem;
+    width: 320px;
+    float: left;
+    color: #C7DEFB;
 }
 

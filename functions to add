@@ -1,0 +1,27 @@
+>click on listing
+listing goes darker shade
+text and icons go light blue
+
+>favourite
+heart stays red
+red border around listing
+
+>trash
+listing background goes red
+icons and text go light blue
+opacity to 0%
+listing deleted
+
+LISTING onCLICK ()
+background > darkblue
+icon > lightblue
+title > lightblue
+url > lightblue
+fav/delete > lightblue
+
+LISTING clickOFF ()
+background > lightblue
+icon >dark blue
+title > dark blue
+url > HIDDEN
+fav/delete > HIDDEN
