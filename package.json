@@ -1,0 +1,23 @@
+{
+  "name": "typescriptbookmarkmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bookmark.js",
+  "scripts": {
+    "start": "tsc && node dist/bookmark.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominicHudson102983679/TypescriptBookmarkManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominicHudson102983679/TypescriptBookmarkManager/issues"
+  },
+  "homepage": "https://github.com/DominicHudson102983679/TypescriptBookmarkManager#readme",
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
+}
