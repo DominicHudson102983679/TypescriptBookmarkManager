@@ -1,14 +1,10 @@
 "use strict";
 // selectors
-/*
-var titleInput =  document.getElementById('new-title');
-var urlInput =  document.getElementById('new-url');
-var newList =  document.getElementById("bookmark-list");
-*/
 var addBtn = document.querySelector('.add-div');
 var titleInput = document.querySelector('.new-title');
 var urlInput = document.querySelector('.new-url');
 var bookmarkList = document.querySelector('.bookmark-list');
+// functions
 if (addBtn == null || titleInput == null || urlInput == null || bookmarkList == null) {
     alert("bookmark is null");
 }
@@ -16,45 +12,45 @@ else {
     addBtn.onclick = function addBookmark() {
         // creating new bookmark div
         var bookmarkDiv = document.createElement('div');
-        // bookmarkDiv.classList.add('new-bookmark-item');
+        bookmarkDiv.classList.add('example-bookmark');
         // creating li element
         var newBookmark = document.createElement('li');
-        newBookmark.classList.add('new-bookmark-item');
+        newBookmark.classList.add('example-bookmark');
         bookmarkDiv.appendChild(newBookmark);
-        // general icon
-        var genIcon = document.createElement('button');
+        // new bookmark icon
+        var genIcon = document.createElement('div');
         genIcon.innerHTML = '<i class="fas fa-globe fa-4x"></i>';
         genIcon.classList.add("gen-icon");
-        bookmarkDiv.appendChild(genIcon);
+        // title input
+        var newTitle = document.createElement('div');
+        newTitle.innerText = titleInput.value;
+        newTitle.classList.add("new-title-div");
+        // url input
+        var newUrl = document.createElement('div');
+        newUrl.innerText = urlInput.value;
+        newUrl.classList.add("new-url-div");
         //completed button
-        var completedButton = document.createElement('button');
+        var completedButton = document.createElement('div');
         completedButton.innerHTML = '<i class="fas fa-heart fa-4x"></i>';
         completedButton.classList.add("complete-btn");
-        bookmarkDiv.appendChild(completedButton);
         //trash button
-        var trashButton = document.createElement('button');
+        var trashButton = document.createElement('div');
         trashButton.innerHTML = '<i class="fas fa-trash fa-4x"></i>';
         trashButton.classList.add("trash-btn");
-        bookmarkDiv.appendChild(trashButton);
-        // input for title/url nodes
-        var titleValue = titleInput.value;
-        var urlValue = urlInput.value;
-        // converting title/url nodes to text
-        var newTitle = document.createTextNode(titleValue);
-        var newUrl = document.createTextNode(urlValue);
-        // adds title, url, completed/trash buttons to list
+        // appending child to new list
         bookmarkList.appendChild(genIcon);
         bookmarkList.appendChild(newTitle);
         bookmarkList.appendChild(newUrl);
         bookmarkList.appendChild(completedButton);
         bookmarkList.appendChild(trashButton);
         /*
-        var titleNode = document.createTextNode(titleInput.value);
-        var urlNode = document.createTextNode(urlInput.value);
-        li.appendChild(titleNode);
-        li.appendChild(urlNode);
-        titleInput.innerHTML = "";
-        urlInput.innerHTML = "";
+            // input for title/url nodes
+            var titleValue = titleInput.value;
+            var urlValue = urlInput.value;
+            // converting title/url nodes to text
+            var newTitle = document.createElement(titleValue);
+            var newUrl = document.createTextNode(urlValue);
         */
+        // adds icon, title, url, completed/trash buttons under current bookmarks
     };
 }
