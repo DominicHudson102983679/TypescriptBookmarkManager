@@ -21,25 +21,42 @@ addBtn.onclick = function addBookmark() {
 
     // creating new bookmark div
     const bookmarkDiv = document.createElement('div');
-    bookmarkDiv.classList.add('vgbhfgdgdfg');
+    // bookmarkDiv.classList.add('new-bookmark-item');
     // creating li element
     var newBookmark = document.createElement('li');
 
-    newBookmark.innerText = 'hey';
-    newBookmark.classList.add('todo-item')
+    newBookmark.classList.add('new-bookmark-item');
     bookmarkDiv.appendChild(newBookmark);
+
+    // general icon
+    const genIcon = document.createElement('button');
+    genIcon.innerHTML = '<i class="fas fa-globe fa-4x"></i>';
+    genIcon.classList.add("gen-icon");
+    bookmarkDiv.appendChild(genIcon);
+
     //completed button
     const completedButton = document.createElement('button');
-    completedButton.innerText = '<is complted working>';
+    completedButton.innerHTML = '<i class="fas fa-heart fa-4x"></i>';
     completedButton.classList.add("complete-btn");
     bookmarkDiv.appendChild(completedButton);
     //trash button
     const trashButton = document.createElement('button');
-    trashButton.innerText = 'is trash working'
+    trashButton.innerHTML = '<i class="fas fa-trash fa-4x"></i>'
     trashButton.classList.add("trash-btn");
     bookmarkDiv.appendChild(trashButton);
-    //
-    bookmarkList.appendChild(bookmarkDiv);
+    // input for title/url nodes
+    var titleValue = titleInput.value;
+    var urlValue = urlInput.value;
+    // converting title/url nodes to text
+    var newTitle = document.createTextNode(titleValue);
+    var newUrl = document.createTextNode(urlValue);
+
+    // adds title, url, completed/trash buttons to list
+    bookmarkList.appendChild(genIcon);
+    bookmarkList.appendChild(newTitle);
+    bookmarkList.appendChild(newUrl);
+    bookmarkList.appendChild(completedButton);
+    bookmarkList.appendChild(trashButton);
 
 
     /*
