@@ -1,13 +1,4 @@
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #E3E3E3;
   height: 100vh;
   width: 100vh;
@@ -29,7 +20,7 @@ body {
   margin-top: 40px;
 }
 
-.bookmark-list {
+.example-bookmark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,5 +183,15 @@ body {
   width: 450px;
   height: 40px;
   text-align: center;
+}
+
+.titleNode {
+  color: red;
+  font-size: 50rem;
+}
+
+.urlNode {
+  color: red;
+  font-size: 50rem;
 }
 /*# sourceMappingURL=bookmark.css.map */
