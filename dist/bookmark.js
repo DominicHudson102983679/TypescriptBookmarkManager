@@ -4,7 +4,17 @@ var addBtn = document.querySelector('.add-div');
 var titleInput = document.querySelector('.new-title');
 var urlInput = document.querySelector('.new-url');
 var bookmarkList = document.querySelector('.bookmark-list');
+var exampleBookmark = document.querySelector('.example-bookmark1');
+// event listerners
+/*
+bookmarkList.addEventListener("click", highlight());
+exampleBookmark.addEventListener("click", highlight());
+*/
 // functions
+var bookmarkTitle = document.querySelector('.bookmark-title');
+function highlight() {
+    bookmarkTitle.style.color = "red";
+}
 if (addBtn == null || titleInput == null || urlInput == null || bookmarkList == null) {
     alert("bookmark is null");
 }
@@ -43,14 +53,5 @@ else {
         bookmarkList.appendChild(newUrl);
         bookmarkList.appendChild(completedButton);
         bookmarkList.appendChild(trashButton);
-        /*
-            // input for title/url nodes
-            var titleValue = titleInput.value;
-            var urlValue = urlInput.value;
-            // converting title/url nodes to text
-            var newTitle = document.createElement(titleValue);
-            var newUrl = document.createTextNode(urlValue);
-        */
-        // adds icon, title, url, completed/trash buttons under current bookmarks
     };
 }

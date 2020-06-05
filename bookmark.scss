@@ -4,19 +4,26 @@
     align-items: center;
 }
 
+@mixin lightBlue {
+    color: #C7DEFB;
+}
+
+@mixin darkBlue {
+    color: rgb(62, 66, 92);
+}
+
 body {
     @include flexCenter();
     background-color: #E3E3E3;
     height: 100vh;
     width: 100vh;
     font-family: 'Noto Serif', serif;
-
     padding: 0px;
 }
 
 .container {
     background-color: rgb(62, 66, 92);
-    height: 900px;
+    height: 90vh;
     width: 900px;
 }
 
@@ -31,7 +38,7 @@ body {
 }
 
 // list of bookmarks
-.example-bookmark {
+.example-bookmark1, .example-bookmark2 {
     @include flexCenter();
     background-color: #C7DEFB;
     height: 135px;
@@ -48,12 +55,7 @@ body {
 //icons
 
 // add icon top right
-.add-div {
-    @include flexCenter();
-    float: right;
-    margin-right: 70px;
-    margin-top: 55px;
-}
+
 
 .fa-plus-square {
     @include flexCenter();
@@ -73,7 +75,8 @@ body {
 .fa-heart, 
 .fa-trash,
 .fa-google,
-.fa-facebook-square {
+.fa-facebook-square, 
+.fa-globe {
     color: rgb(62, 66, 92);
 }
 
@@ -83,7 +86,7 @@ body {
     width: 90px;
 }
 
-.heart-div:hover{
+.heart-div:hover, .complete-btn:hover{
     .fa-heart {
         transition: color 0.5s ease-in-out; 
         color: rgb(251, 99, 99);
@@ -92,12 +95,12 @@ body {
 }
 
 // trash icon and animation
-.trash-div {
+.trash-div, .trash-btn {
     @include flexCenter();
     width: 90px;
 }
 
-.trash-div:hover{
+.trash-div:hover, .trash-btn:hover{
     .fa-trash {
         transition: color 0.5s ease-in-out; 
         color: rgb(251, 99, 99);
@@ -124,7 +127,7 @@ body {
     font-size: 1.25rem;
     width: 320px;
     float: left;
-    color: #C7DEFB;
+    color: rgb(62, 66, 92);
 }
 
 //-----------------------------------
@@ -132,36 +135,41 @@ body {
 .new-bookmark {
     @include flexCenter();
     justify-content: space-evenly;
-    width: 800px;
+    width: 790px;
     height: 75px;
     margin-left: 50px;
     margin-top: 10px;
-    background-color: rosybrown;
-
+    border-color: #C7DEFB;
+    border-style: solid;
+    color: rgb(62, 66, 92);
 }
 
 .new-title {
     width: 200px;
     height: 40px;
     text-align: center;
+    text-decoration: grey;
 }
 
 .new-url {
     width: 450px;
     height: 40px;
     text-align: center;
+    text-decoration: grey;
 }
 
 // new bookmark input bar
 
+
 .gen-icon {
     @include flexCenter();
     margin-left: 10px;
-    padding: 0;
+    //padding-left: 20px;
     display: inline-block;
     height: 135px;
     width: 100px;
     background-color: #C7DEFB;
+    
 }
 
 .new-title-div {
@@ -171,14 +179,16 @@ body {
     height: 135px;
     width: 200px;
     background-color: #C7DEFB;
-    // font-size: 2.5rem;
+    font-size: 2.5rem;
+    color: rgb(62, 66, 92);
 }
 .new-url-div {
     display: inline-block;
     height: 135px;
     width: 320px;
     background-color: #C7DEFB;
-    // font-size: 1.25rem;
+    font-size: 1.25rem;
+    color: rgb(62, 66, 92);
 }
 
 .complete-btn {
@@ -195,5 +205,39 @@ body {
     background-color: #C7DEFB;
 }
 
+
+
 //-------------------------------------------------
 
+// highlight function
+/*
+.example-bookmark1:visited{
+    .example-bookmark1:focus{
+        color: rgb(251, 99, 99);
+    }
+    .icon-div:focus {
+        background-color: rgb(251, 99, 99);
+    }
+    .fa-google:focus {
+        color:  #C7DEFB;
+    }
+    .bookmark-title {
+        background-color: rgb(251, 99, 99);
+    }
+    .bookmark-url {
+        background-color: rgb(251, 99, 99);
+    }
+    .heart-div {
+        background-color: rgb(251, 99, 99);
+    }
+    .fa-heart:focus {
+        color: #C7DEFB;
+    }
+    .trash-div {
+        background-color: rgb(251, 99, 99);
+    }
+    .fa-trash:focus {
+        color: #C7DEFB;
+    }
+}
+*/

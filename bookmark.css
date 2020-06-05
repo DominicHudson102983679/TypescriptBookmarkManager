@@ -17,7 +17,7 @@ body {
 
 .container {
   background-color: #3e425c;
-  height: 900px;
+  height: 90vh;
   width: 900px;
 }
 
@@ -29,7 +29,7 @@ body {
   margin-top: 40px;
 }
 
-.example-bookmark {
+.example-bookmark1, .example-bookmark2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,21 +47,6 @@ body {
   margin-right: 50px;
   margin-top: 25px;
   cursor: pointer;
-}
-
-.add-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  float: right;
-  margin-right: 70px;
-  margin-top: 55px;
 }
 
 .fa-plus-square {
@@ -88,7 +73,8 @@ body {
 .fa-heart,
 .fa-trash,
 .fa-google,
-.fa-facebook-square {
+.fa-facebook-square,
+.fa-globe {
   color: #3e425c;
 }
 
@@ -105,13 +91,13 @@ body {
   width: 90px;
 }
 
-.heart-div:hover .fa-heart {
+.heart-div:hover .fa-heart, .complete-btn:hover .fa-heart {
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
   color: #fb6363;
 }
 
-.trash-div {
+.trash-div, .trash-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,7 +110,7 @@ body {
   width: 90px;
 }
 
-.trash-div:hover .fa-trash {
+.trash-div:hover .fa-trash, .trash-btn:hover .fa-trash {
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
   color: #fb6363;
@@ -153,7 +139,7 @@ body {
   font-size: 1.25rem;
   width: 320px;
   float: left;
-  color: #C7DEFB;
+  color: #3e425c;
 }
 
 .new-bookmark {
@@ -169,23 +155,29 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 800px;
+  width: 790px;
   height: 75px;
   margin-left: 50px;
   margin-top: 10px;
-  background-color: rosybrown;
+  border-color: #C7DEFB;
+  border-style: solid;
+  color: #3e425c;
 }
 
 .new-title {
   width: 200px;
   height: 40px;
   text-align: center;
+  -webkit-text-decoration: grey;
+          text-decoration: grey;
 }
 
 .new-url {
   width: 450px;
   height: 40px;
   text-align: center;
+  -webkit-text-decoration: grey;
+          text-decoration: grey;
 }
 
 .gen-icon {
@@ -199,7 +191,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
-  padding: 0;
   display: inline-block;
   height: 135px;
   width: 100px;
@@ -213,6 +204,8 @@ body {
   height: 135px;
   width: 200px;
   background-color: #C7DEFB;
+  font-size: 2.5rem;
+  color: #3e425c;
 }
 
 .new-url-div {
@@ -220,6 +213,8 @@ body {
   height: 135px;
   width: 320px;
   background-color: #C7DEFB;
+  font-size: 1.25rem;
+  color: #3e425c;
 }
 
 .complete-btn {
@@ -235,4 +230,36 @@ body {
   width: 90px;
   background-color: #C7DEFB;
 }
+
+/*
+.example-bookmark1:visited{
+    .example-bookmark1:focus{
+        color: rgb(251, 99, 99);
+    }
+    .icon-div:focus {
+        background-color: rgb(251, 99, 99);
+    }
+    .fa-google:focus {
+        color:  #C7DEFB;
+    }
+    .bookmark-title {
+        background-color: rgb(251, 99, 99);
+    }
+    .bookmark-url {
+        background-color: rgb(251, 99, 99);
+    }
+    .heart-div {
+        background-color: rgb(251, 99, 99);
+    }
+    .fa-heart:focus {
+        color: #C7DEFB;
+    }
+    .trash-div {
+        background-color: rgb(251, 99, 99);
+    }
+    .fa-trash:focus {
+        color: #C7DEFB;
+    }
+}
+*/
 /*# sourceMappingURL=bookmark.css.map */
